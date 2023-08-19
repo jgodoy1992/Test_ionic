@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title><h4>SkeletonApp</h4></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h2>Bienvenido!</h2>
+  <ion-item>
+    <ion-label>Usuario</ion-label>
+    <ion-text>{{ username }}</ion-text>
+  </ion-item>
+  <h2>Informacion adicional</h2>
+  <ion-item>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input type="text" [(ngModel)]="firstName"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Apellido</ion-label>
+    <ion-input type="text" [(ngModel)]="lastName"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Nivel de Educación</ion-label>
+    <ion-select [(ngModel)]="educationLevel">
+      <ion-select-option value="primaria">Primaria</ion-select-option>
+      <ion-select-option value="secundaria">Secundaria</ion-select-option>
+      <ion-select-option value="universidad">Universidad</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>Fecha de Nacimiento</ion-label>
+    <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="birthdate"></ion-datetime>
+  </ion-item>
+  <ion-button expand="full" (click)="showInfo()">Mostrar</ion-button>
+  <ion-button expand="full" (click)="clearFields()">Limpiar</ion-button>
+</ion-content>
+
+<ion-footer>
+  <p>App desarrollada por Joaquín Godoy</p>
+</ion-footer>
+
